@@ -178,7 +178,7 @@ public abstract class SimpleHttpClient {
     }
 
     public void connect(int connectTimeout, int soTimeout)
-           throws UnknownHostException, IOException {
+           throws IOException {
         final String encoding = "ISO-8859-1";
         SocketAddress addr = new InetSocketAddress("localhost", port);
         socket = new Socket();
@@ -190,7 +190,7 @@ public abstract class SimpleHttpClient {
         Reader r = new InputStreamReader(is, encoding);
         reader = new BufferedReader(r);
     }
-    public void connect() throws UnknownHostException, IOException {
+    public void connect() throws IOException {
         connect(0,0);
     }
 

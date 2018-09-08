@@ -27,39 +27,39 @@ public interface SSLSupport {
     /**
      * The Request attribute key for the cipher suite.
      */
-    public static final String CIPHER_SUITE_KEY =
+    String CIPHER_SUITE_KEY =
             "javax.servlet.request.cipher_suite";
 
     /**
      * The Request attribute key for the key size.
      */
-    public static final String KEY_SIZE_KEY = "javax.servlet.request.key_size";
+    String KEY_SIZE_KEY = "javax.servlet.request.key_size";
 
     /**
      * The Request attribute key for the client certificate chain.
      */
-    public static final String CERTIFICATE_KEY =
+    String CERTIFICATE_KEY =
             "javax.servlet.request.X509Certificate";
 
     /**
      * The Request attribute key for the session id.
      * This one is a Tomcat extension to the Servlet spec.
      */
-    public static final String SESSION_ID_KEY =
+    String SESSION_ID_KEY =
             "javax.servlet.request.ssl_session_id";
 
     /**
      * The request attribute key for the session manager.
      * This one is a Tomcat extension to the Servlet spec.
      */
-    public static final String SESSION_MGR =
+    String SESSION_MGR =
             "javax.servlet.request.ssl_session_mgr";
 
     /**
      * The request attribute key under which the String indicating the protocol
      * that created the SSL socket is recorded - e.g. TLSv1 or TLSv1.2 etc.
      */
-    public static final String PROTOCOL_VERSION_KEY =
+    String PROTOCOL_VERSION_KEY =
             "org.apache.tomcat.util.net.secure_protocol_version";
 
     /**
@@ -70,7 +70,7 @@ public interface SSLSupport {
      *
      * @throws IOException If an error occurs trying to obtain the cipher suite
      */
-    public String getCipherSuite() throws IOException;
+    String getCipherSuite() throws IOException;
 
     /**
      * The client certificate chain (if any).
@@ -82,7 +82,7 @@ public interface SSLSupport {
      * @throws IOException If an error occurs trying to obtain the certificate
      *                     chain
      */
-    public X509Certificate[] getPeerCertificateChain() throws IOException;
+    X509Certificate[] getPeerCertificateChain() throws IOException;
 
     /**
      * Get the keysize.
@@ -102,7 +102,7 @@ public interface SSLSupport {
      *
      * @throws IOException If an error occurs trying to obtain the key size
      */
-    public Integer getKeySize() throws IOException;
+    Integer getKeySize() throws IOException;
 
     /**
      * The current session Id.
@@ -111,7 +111,7 @@ public interface SSLSupport {
      *
      * @throws IOException If an error occurs trying to obtain the session ID
      */
-    public String getSessionId() throws IOException;
+    String getSessionId() throws IOException;
 
     /**
      * @return the protocol String indicating how the SSL socket was created
@@ -120,6 +120,6 @@ public interface SSLSupport {
      * @throws IOException If an error occurs trying to obtain the protocol
      *   information from the socket
      */
-    public String getProtocol() throws IOException;
+    String getProtocol() throws IOException;
 }
 

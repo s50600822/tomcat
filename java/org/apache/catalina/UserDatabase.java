@@ -40,25 +40,25 @@ public interface UserDatabase {
     /**
      * @return the set of {@link Group}s defined in this user database.
      */
-    public Iterator<Group> getGroups();
+    Iterator<Group> getGroups();
 
 
     /**
      * @return the unique global identifier of this user database.
      */
-    public String getId();
+    String getId();
 
 
     /**
      * @return the set of {@link Role}s defined in this user database.
      */
-    public Iterator<Role> getRoles();
+    Iterator<Role> getRoles();
 
 
     /**
      * @return the set of {@link User}s defined in this user database.
      */
-    public Iterator<User> getUsers();
+    Iterator<User> getUsers();
 
 
     // --------------------------------------------------------- Public Methods
@@ -69,7 +69,7 @@ public interface UserDatabase {
      *
      * @exception Exception if any exception is thrown during closing
      */
-    public void close() throws Exception;
+    void close() throws Exception;
 
 
     /**
@@ -79,7 +79,7 @@ public interface UserDatabase {
      * @param description The description of this group
      * @return The new group
      */
-    public Group createGroup(String groupname, String description);
+    Group createGroup(String groupname, String description);
 
 
     /**
@@ -89,7 +89,7 @@ public interface UserDatabase {
      * @param description The description of this role
      * @return The new role
      */
-    public Role createRole(String rolename, String description);
+    Role createRole(String rolename, String description);
 
 
     /**
@@ -100,8 +100,8 @@ public interface UserDatabase {
      * @param fullName The full name of the new user
      * @return The new user
      */
-    public User createUser(String username, String password,
-                           String fullName);
+    User createUser(String username, String password,
+                    String fullName);
 
 
     /**
@@ -110,7 +110,7 @@ public interface UserDatabase {
      *
      * @param groupname Name of the group to return
      */
-    public Group findGroup(String groupname);
+    Group findGroup(String groupname);
 
 
     /**
@@ -119,7 +119,7 @@ public interface UserDatabase {
      *
      * @param rolename Name of the role to return
      */
-    public Role findRole(String rolename);
+    Role findRole(String rolename);
 
 
     /**
@@ -128,7 +128,7 @@ public interface UserDatabase {
      *
      * @param username Name of the user to return
      */
-    public User findUser(String username);
+    User findUser(String username);
 
 
     /**
@@ -136,7 +136,7 @@ public interface UserDatabase {
      *
      * @exception Exception if any exception is thrown during opening
      */
-    public void open() throws Exception;
+    void open() throws Exception;
 
 
     /**
@@ -144,7 +144,7 @@ public interface UserDatabase {
      *
      * @param group The group to be removed
      */
-    public void removeGroup(Group group);
+    void removeGroup(Group group);
 
 
     /**
@@ -152,7 +152,7 @@ public interface UserDatabase {
      *
      * @param role The role to be removed
      */
-    public void removeRole(Role role);
+    void removeRole(Role role);
 
 
     /**
@@ -160,7 +160,7 @@ public interface UserDatabase {
      *
      * @param user The user to be removed
      */
-    public void removeUser(User user);
+    void removeUser(User user);
 
 
     /**
@@ -169,7 +169,7 @@ public interface UserDatabase {
      *
      * @exception Exception if any exception is thrown during saving
      */
-    public void save() throws Exception;
+    void save() throws Exception;
 
 
 }

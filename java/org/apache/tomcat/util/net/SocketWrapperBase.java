@@ -877,8 +877,8 @@ public abstract class SocketWrapperBase<E> {
          *
          * @return The call, if any, to make to the completion handler
          */
-        public CompletionHandlerCall callHandler(CompletionState state, ByteBuffer[] buffers,
-                int offset, int length);
+        CompletionHandlerCall callHandler(CompletionState state, ByteBuffer[] buffers,
+                                          int offset, int length);
     }
 
     /**

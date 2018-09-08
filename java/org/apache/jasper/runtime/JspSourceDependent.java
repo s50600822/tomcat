@@ -35,6 +35,6 @@ public interface JspSourceDependent {
     * has a source dependency on the file.
     * @return the map of dependent resources
     */
-    public Map<String,Long> getDependants();
+   Map<String,Long> getDependants();
 
 }

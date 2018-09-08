@@ -37,16 +37,16 @@ public interface XAResource {
 
     void start(Xid xid, int flags) throws XAException;
 
-    public static final int TMENDRSCAN = 0x00800000;
-    public static final int TMFAIL = 0x20000000;
-    public static final int TMJOIN = 0x00200000;
-    public static final int TMNOFLAGS = 0x00000000;
-    public static final int TMONEPHASE = 0x40000000;
-    public static final int TMRESUME = 0x08000000;
-    public static final int TMSTARTRSCAN = 0x01000000;
-    public static final int TMSUCCESS = 0x04000000;
-    public static final int TMSUSPEND = 0x02000000;
-    public static final int XA_RDONLY = 0x00000003;
-    public static final int XA_OK = 0;
+    int TMENDRSCAN = 0x00800000;
+    int TMFAIL = 0x20000000;
+    int TMJOIN = 0x00200000;
+    int TMNOFLAGS = 0x00000000;
+    int TMONEPHASE = 0x40000000;
+    int TMRESUME = 0x08000000;
+    int TMSTARTRSCAN = 0x01000000;
+    int TMSUCCESS = 0x04000000;
+    int TMSUSPEND = 0x02000000;
+    int XA_RDONLY = 0x00000003;
+    int XA_OK = 0;
 
 }

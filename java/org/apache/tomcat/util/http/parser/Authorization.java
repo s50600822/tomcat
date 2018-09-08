@@ -134,6 +134,6 @@ public class Authorization {
         QUOTED_STRING,
         TOKEN_OR_QUOTED_STRING,
         LHEX,
-        QUOTED_TOKEN;
+        QUOTED_TOKEN
     }
 }

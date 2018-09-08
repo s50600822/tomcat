@@ -49,7 +49,7 @@ public interface RegistryMBean {
      *      errors
      * @throws Exception Error invoking operation
      */
-    public void invoke(List<ObjectName> mbeans, String operation, boolean failFirst)
+    void invoke(List<ObjectName> mbeans, String operation, boolean failFirst)
             throws Exception;
 
     /**
@@ -83,7 +83,7 @@ public interface RegistryMBean {
      *
      * @since 1.1
      */
-    public void registerComponent(Object bean, String oname, String type)
+    void registerComponent(Object bean, String oname, String type)
            throws Exception;
 
     /**
@@ -94,7 +94,7 @@ public interface RegistryMBean {
      *
      * @since 1.1
      */
-    public void unregisterComponent(String oname);
+    void unregisterComponent(String oname);
 
 
      /**
@@ -106,7 +106,7 @@ public interface RegistryMBean {
       * @return  An unique id for the domain:name combination
       * @since 1.1
       */
-    public int getId(String domain, String name);
+     int getId(String domain, String name);
 
 
     /**
@@ -116,5 +116,5 @@ public interface RegistryMBean {
      * It will be called automatically if the Registry is unregistered.
      * @since 1.1
      */
-    public void stop();
+    void stop();
 }

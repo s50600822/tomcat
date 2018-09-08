@@ -17,8 +17,8 @@
 package javax.transaction.xa;
 
 public interface Xid {
-    static final int MAXGTRIDSIZE = 64;
-    static final int MAXBQUALSIZE = 64;
+    int MAXGTRIDSIZE = 64;
+    int MAXBQUALSIZE = 64;
 
     int getFormatId();
 

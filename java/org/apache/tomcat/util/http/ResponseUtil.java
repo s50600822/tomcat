@@ -106,7 +106,7 @@ public class ResponseUtil {
     }
 
 
-    private static interface Adapter {
+    private interface Adapter {
 
         Collection<String> getHeaders(String name);
 

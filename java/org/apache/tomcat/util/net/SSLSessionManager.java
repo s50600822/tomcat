@@ -25,5 +25,5 @@ public interface SSLSessionManager {
     /**
      * Invalidate the SSL session
      */
-    public void invalidateSession();
+    void invalidateSession();
 }

@@ -40,5 +40,5 @@ public interface InputBuffer {
      *
      * @throws IOException If an I/O error occurs reading from the input stream
      */
-    public int doRead(ApplicationBufferHandler handler) throws IOException;
+    int doRead(ApplicationBufferHandler handler) throws IOException;
 }

@@ -185,7 +185,7 @@ class ParserController implements TagConstants {
      * or null if the JSP page or tag file is to be read from the filesystem
      */
     private Node.Nodes doParse(String inFileName, Node parent, Jar jar)
-            throws FileNotFoundException, JasperException, IOException {
+            throws JasperException, IOException {
 
         Node.Nodes parsedPage = null;
         isEncodingSpecifiedInProlog = false;

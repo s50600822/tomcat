@@ -24,5 +24,5 @@ package org.apache.coyote;
  * org.apache.catalina package.
  */
 public interface AsyncContextCallback {
-    public void fireOnComplete();
+    void fireOnComplete();
 }

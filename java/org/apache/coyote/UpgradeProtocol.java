@@ -29,14 +29,14 @@ public interface UpgradeProtocol {
      *         protocol via an HTTP/1.1 upgrade request or <code>null</code> if
      *         upgrade via an HTTP/1.1 upgrade request is not supported.
      */
-    public String getHttpUpgradeName(boolean isSSLEnabled);
+    String getHttpUpgradeName(boolean isSSLEnabled);
 
     /**
      * @return The byte sequence as listed in the IANA registry for this
      *         protocol or <code>null</code> if upgrade via ALPN is not
      *         supported.
      */
-    public byte[] getAlpnIdentifier();
+    byte[] getAlpnIdentifier();
 
     /**
      * @return The name of the protocol as listed in the IANA registry if and
@@ -55,7 +55,7 @@ public interface UpgradeProtocol {
      *                      will not exceed 255 bytes. Tomcat's behaviour if
      *                      longer names are used is undefined.
      */
-    public String getAlpnName();
+    String getAlpnName();
 
     /**
      * @param socketWrapper The socketWrapper for the connection that requires
@@ -66,7 +66,7 @@ public interface UpgradeProtocol {
      * @return A processor instance for processing a connection using this
      *         protocol.
      */
-    public Processor getProcessor(SocketWrapperBase<?> socketWrapper, Adapter adapter);
+    Processor getProcessor(SocketWrapperBase<?> socketWrapper, Adapter adapter);
 
 
     /**
@@ -77,7 +77,7 @@ public interface UpgradeProtocol {
      *
      * @return An instance of the HTTP upgrade handler for this protocol
      */
-    public InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapper, Adapter adapter, Request request);
+    InternalHttpUpgradeHandler getInternalUpgradeHandler(SocketWrapperBase<?> socketWrapper, Adapter adapter, Request request);
 
 
     /**
@@ -90,5 +90,5 @@ public interface UpgradeProtocol {
      * @return <code>true</code> if the request is accepted, otherwise
      *         <code>false</code>
      */
-    public boolean accept(Request request);
+    boolean accept(Request request);
 }

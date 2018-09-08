@@ -46,8 +46,8 @@ public final class JspMethodExpression extends MethodExpression implements
 
     @Override
     public MethodInfo getMethodInfo(ELContext context)
-            throws NullPointerException, PropertyNotFoundException,
-            MethodNotFoundException, ELException {
+            throws NullPointerException,
+            ELException {
         context.notifyBeforeEvaluation(getExpressionString());
         try {
             MethodInfo result = this.target.getMethodInfo(context);
@@ -67,8 +67,8 @@ public final class JspMethodExpression extends MethodExpression implements
 
     @Override
     public Object invoke(ELContext context, Object[] params)
-            throws NullPointerException, PropertyNotFoundException,
-            MethodNotFoundException, ELException {
+            throws NullPointerException,
+            ELException {
         context.notifyBeforeEvaluation(getExpressionString());
         try {
             Object result = this.target.invoke(context, params);

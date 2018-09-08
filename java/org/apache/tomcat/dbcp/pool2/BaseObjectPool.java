@@ -61,11 +61,9 @@ public abstract class BaseObjectPool<T> extends BaseObject implements ObjectPool
     /**
      * Not supported in this base implementation.
      *
-     * @throws UnsupportedOperationException if the pool does not implement this
-     *          method
      */
     @Override
-    public void clear() throws Exception, UnsupportedOperationException {
+    public void clear() throws Exception {
         throw new UnsupportedOperationException();
     }
 
@@ -73,11 +71,9 @@ public abstract class BaseObjectPool<T> extends BaseObject implements ObjectPool
      * Not supported in this base implementation. Subclasses should override
      * this behavior.
      *
-     * @throws UnsupportedOperationException if the pool does not implement this
-     *          method
      */
     @Override
-    public void addObject() throws Exception, UnsupportedOperationException {
+    public void addObject() throws Exception {
         throw new UnsupportedOperationException();
     }
 

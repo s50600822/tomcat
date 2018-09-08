@@ -55,7 +55,7 @@ public final class JspValueExpression extends ValueExpression implements
 
     @Override
     public Class<?> getType(ELContext context) throws NullPointerException,
-            PropertyNotFoundException, ELException {
+            ELException {
         context.notifyBeforeEvaluation(getExpressionString());
         try {
             Class<?> result = this.target.getType(context);
@@ -72,7 +72,7 @@ public final class JspValueExpression extends ValueExpression implements
 
     @Override
     public boolean isReadOnly(ELContext context) throws NullPointerException,
-            PropertyNotFoundException, ELException {
+            ELException {
         context.notifyBeforeEvaluation(getExpressionString());
         try {
             boolean result = this.target.isReadOnly(context);
@@ -89,8 +89,8 @@ public final class JspValueExpression extends ValueExpression implements
 
     @Override
     public void setValue(ELContext context, Object value)
-            throws NullPointerException, PropertyNotFoundException,
-            PropertyNotWritableException, ELException {
+            throws NullPointerException,
+            ELException {
         context.notifyBeforeEvaluation(getExpressionString());
         try {
             this.target.setValue(context, value);
@@ -109,7 +109,7 @@ public final class JspValueExpression extends ValueExpression implements
 
     @Override
     public Object getValue(ELContext context) throws NullPointerException,
-            PropertyNotFoundException, ELException {
+            ELException {
         context.notifyBeforeEvaluation(getExpressionString());
         try {
             Object result = this.target.getValue(context);

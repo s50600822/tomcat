@@ -1571,13 +1571,13 @@ class Http2UpgradeHandler extends AbstractStream implements InternalHttpUpgradeH
     }
 
 
-    protected static interface HeaderFrameBuffers {
-        public void startFrame();
-        public void endFrame() throws IOException;
-        public void endHeaders() throws IOException;
-        public byte[] getHeader();
-        public ByteBuffer getPayload();
-        public void expandPayload();
+    protected interface HeaderFrameBuffers {
+        void startFrame();
+        void endFrame() throws IOException;
+        void endHeaders() throws IOException;
+        byte[] getHeader();
+        ByteBuffer getPayload();
+        void expandPayload();
     }
 
 

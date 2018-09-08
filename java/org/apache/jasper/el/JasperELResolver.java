@@ -85,7 +85,7 @@ public class JasperELResolver extends CompositeELResolver {
 
     @Override
     public Object getValue(ELContext context, Object base, Object property)
-        throws NullPointerException, PropertyNotFoundException, ELException {
+        throws NullPointerException, ELException {
         context.setPropertyResolved(false);
 
         int start;

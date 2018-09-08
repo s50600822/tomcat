@@ -70,7 +70,7 @@ public class JDTCompiler extends org.apache.jasper.compiler.Compiler {
      */
     @Override
     protected void generateClass(Map<String,SmapStratum> smaps)
-        throws FileNotFoundException, JasperException, Exception {
+        throws Exception {
 
         long t1 = 0;
         if (log.isDebugEnabled()) {

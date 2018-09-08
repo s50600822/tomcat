@@ -27,7 +27,7 @@ public interface MembershipListener {
      * A member was added to the group
      * @param member Member - the member that was added
      */
-    public void memberAdded(Member member);
+    void memberAdded(Member member);
 
     /**
      * A member was removed from the group<br>
@@ -35,6 +35,6 @@ public interface MembershipListener {
      * @param member Member
      * @see Member#SHUTDOWN_PAYLOAD
      */
-    public void memberDisappeared(Member member);
+    void memberDisappeared(Member member);
 
 }

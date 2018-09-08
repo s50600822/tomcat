@@ -24,10 +24,10 @@ import java.nio.ByteBuffer;
  */
 public interface ApplicationBufferHandler {
 
-    public void setByteBuffer(ByteBuffer buffer);
+    void setByteBuffer(ByteBuffer buffer);
 
-    public ByteBuffer getByteBuffer();
+    ByteBuffer getByteBuffer();
 
-    public void expand(int size);
+    void expand(int size);
 
 }
